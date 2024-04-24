@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import yaml
 
 from wowclass import all_classes
@@ -7,8 +9,6 @@ from wowraid import wowraid
 from wowrole import healer, tank, zugger
 
 role_list = [tank, healer, zugger]
-
-RANDOM_SEED = 42069
 
 
 def gamers_from_yaml(yaml_path):

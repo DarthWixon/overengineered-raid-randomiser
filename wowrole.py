@@ -1,9 +1,8 @@
 import random
 
-from main import RANDOM_SEED
 from wowclass import healer_classes, tank_classes, zuggger_classes
 
-random.seed(RANDOM_SEED)
+random.seed(42069)
 
 
 class wowrole:
