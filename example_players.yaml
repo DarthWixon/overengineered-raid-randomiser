@@ -1,0 +1,51 @@
+# ban gnomes by default because I have taste
+---
+name: Whiskeyjack
+banned_roles: ["tank"]
+banned_classes: ["hunter", "mage", "warlock"]
+banned_races: ["gnome", "mechagnome"]
+---
+name: Fiddler
+banned_roles: ["healer"]
+banned_classes: ["priest", "paladin"]
+banned_races: ["gnome", "mechagnome"]
+---
+name: Quick Ben
+banned_roles: ["tank", "healer"]
+banned_classes: ["warrior", "death knight"]
+banned_races: ["gnome", "mechagnome"]
+---
+name: Kalam
+banned_roles: ["tank", "healer"]
+banned_classes: []
+banned_races: ["gnome", "mechagnome"]
+---
+name: Hedge
+banned_roles: ["healer"]
+banned_classes: []
+banned_races: ["gnome", "mechagnome"]
+---
+name: Detoran
+banned_roles: []
+banned_classes: []
+banned_races: ["gnome", "mechagnome"]
+---
+name: Picker
+banned_roles: []
+banned_classes: []
+banned_races: ["gnome", "mechagnome"]
+---
+name: Blend
+banned_roles: ["tank"]
+banned_classes: []
+banned_races: ["gnome", "mechagnome"]
+---
+name: Mallet
+banned_roles: []
+banned_classes: []
+banned_races: ["gnome", "mechagnome"]
+---
+name: Sorry
+banned_roles: ["healer", "tank"]
+banned_classes: []
+banned_races: ["gnome", "mechagnome"]

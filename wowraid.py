@@ -6,11 +6,6 @@ from wowrole import healer, tank, zugger
 role_list = [tank, healer, zugger]
 
 
-# this makes it not random each time
-# lets see if anyone notices
-random.seed(42069)
-
-
 class wowraid:
     def __init__(self, name, gamers):
         self.name = name

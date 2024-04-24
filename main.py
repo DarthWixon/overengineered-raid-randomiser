@@ -1,4 +1,5 @@
-from pathlib import Path
+import argparse
+import random
 
 import yaml
 
@@ -54,7 +55,19 @@ def print_raid_comp(raid_group: wowraid):
 
 
 def main():
-    player_yaml = "players.yaml"
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "-p", "--players", metavar="PLAYERS", help="Path to players.yaml"
+    )
+    parser.add_argument("-s", "--seed", metavar="SEED", help="Random Seed")
+    args = parser.parse_args()
+    if args.players:
+        player_yaml = args.players
+    else:
+        player_yaml = "example_players.yaml"
+
+    random.seed(args.seed)
+
     raid = wowraid(name="Based on What", gamers=gamers_from_yaml(player_yaml))
     assign_roles(raid)
     roll_classes(raid)

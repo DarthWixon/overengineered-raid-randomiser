@@ -2,8 +2,6 @@ import random
 
 from wowclass import healer_classes, tank_classes, zuggger_classes
 
-random.seed(42069)
-
 
 class wowrole:
     def __init__(self, name, classes, tank_flag=False, healer_flag=False):

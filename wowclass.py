@@ -2,8 +2,6 @@ import random
 
 import wowraces
 
-random.seed(42069)
-
 
 class wowclass:
     def __init__(self, name, races, tank_specs=[], healer_specs=[], zugger_specs=[]):
