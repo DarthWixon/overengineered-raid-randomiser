@@ -36,7 +36,6 @@ class wowraid:
         random.shuffle(self.unassigned_gamers)
         # assign tanks
         for gamer in self.unassigned_gamers:
-            print(gamer.name)
             if tank not in gamer.banned_roles:
                 self.assigned_tanks.append(gamer)
                 self.unassigned_gamers.remove(gamer)
@@ -47,7 +46,6 @@ class wowraid:
 
         # assign healers
         for gamer in self.unassigned_gamers:
-            print(gamer.name)
             if healer not in gamer.banned_roles:
                 self.assigned_healers.append(gamer)
                 self.unassigned_gamers.remove(gamer)
