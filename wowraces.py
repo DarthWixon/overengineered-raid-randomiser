@@ -8,7 +8,8 @@ alliance_races = [
     "void elf",
     "lightforged draenei",
     "dark iron dwarf",
-    "kul tiran" "mechagnome",
+    "kul tiran",
+    "mechagnome",
 ]
 horde_races = [
     "orc",
