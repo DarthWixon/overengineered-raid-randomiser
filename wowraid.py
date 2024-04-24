@@ -1,6 +1,7 @@
 import random
 
 import wowerrors
+from main.py import RANDOM_SEED
 from wowrole import healer, tank, zugger
 
 role_list = [tank, healer, zugger]
@@ -8,7 +9,7 @@ role_list = [tank, healer, zugger]
 
 # this makes it not random each time
 # lets see if anyone notices
-random.seed(42069)
+random.seed(RANDOM_SEED)
 
 
 class wowraid:
@@ -36,7 +37,6 @@ class wowraid:
         random.shuffle(self.unassigned_gamers)
         # assign tanks
         for gamer in self.unassigned_gamers:
-            print(gamer.name)
             if tank not in gamer.banned_roles:
                 self.assigned_tanks.append(gamer)
                 self.unassigned_gamers.remove(gamer)
@@ -47,7 +47,6 @@ class wowraid:
 
         # assign healers
         for gamer in self.unassigned_gamers:
-            print(gamer.name)
             if healer not in gamer.banned_roles:
                 self.assigned_healers.append(gamer)
                 self.unassigned_gamers.remove(gamer)

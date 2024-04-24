@@ -1,8 +1,9 @@
 import random
 
 import wowraces
+from main import RANDOM_SEED
 
-random.seed(42069)
+random.seed(RANDOM_SEED)
 
 
 class wowclass:
