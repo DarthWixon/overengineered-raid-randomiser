@@ -7,10 +7,12 @@ role_list = [tank, healer, zugger]
 
 
 class wowraid:
-    def __init__(self, name, gamers):
+    def __init__(self, name, gamers, horde_only=False, alliance_only=False):
         self.name = name
         self.gamers = gamers
         self.num_gamers = len(self.gamers)
+        self.horde_only = horde_only
+        self.alliance_only = alliance_only
         self.choose_comp()
 
     def choose_comp(self):
@@ -65,7 +67,9 @@ class wowraid:
 
     def assign_races(self):
         for gamer in self.gamers:
-            gamer.roll_race()
+            gamer.roll_race(
+                horde_only=self.horde_only, alliance_only=self.alliance_only
+            )
 
     def pretty_print(self):
         divider_string = "===================="

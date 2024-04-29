@@ -60,6 +60,18 @@ def main():
         "-p", "--players", metavar="PLAYERS", help="Path to players.yaml"
     )
     parser.add_argument("-s", "--seed", metavar="SEED", help="Random Seed")
+    parser.add_argument(
+        "-A",
+        "--alliance",
+        action="store_true",
+        help="Set to alliance only raid",
+    )
+    parser.add_argument(
+        "-H",
+        "--horde",
+        action="store_true",
+        help="Set to horde only raid",
+    )
     args = parser.parse_args()
     if args.players:
         player_yaml = args.players
@@ -68,11 +80,16 @@ def main():
 
     random.seed(args.seed)
 
-    raid = wowraid(name="Based on What", gamers=gamers_from_yaml(player_yaml))
+    raid = wowraid(
+        name="Based on What",
+        gamers=gamers_from_yaml(player_yaml),
+        horde_only=args.horde,
+        alliance_only=args.alliance,
+    )
     assign_roles(raid)
     roll_classes(raid)
     roll_races(raid)
-    print_raid_comp(raid)
+    # print_raid_comp(raid)
 
 
 if __name__ == "__main__":

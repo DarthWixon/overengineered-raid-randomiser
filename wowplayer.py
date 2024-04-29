@@ -25,8 +25,10 @@ class wowplayer:
         self.assigned_class = self.assigned_role.roll_class(self.banned_classes)
         self.assigned_spec = self.assigned_class.roll_spec(self.assigned_role)
 
-    def roll_race(self):
-        self.assigned_race = self.assigned_class.roll_race(self.banned_races)
+    def roll_race(self, horde_only=False, alliance_only=False):
+        self.assigned_race = self.assigned_class.roll_race(
+            self.banned_races, horde_only=horde_only, alliance_only=alliance_only
+        )
 
     def pretty_print(self):
         divider_string = "=========="

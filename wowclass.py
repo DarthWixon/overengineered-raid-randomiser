@@ -21,7 +21,12 @@ class wowclass:
         else:
             return random.choice(self.zugger_specs)
 
-    def roll_race(self, banned_races):
+    def roll_race(self, banned_races, horde_only=False, alliance_only=False):
+        # these should only be set on the first call to prevent infinite length lists
+        if horde_only:
+            banned_races = banned_races + wowraces.alliance_races
+        elif alliance_only:
+            banned_races = banned_races + wowraces.horde_races
         choice = random.choice(self.races)
         if choice in banned_races:
             return self.roll_race(banned_races)
