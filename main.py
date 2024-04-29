@@ -49,20 +49,27 @@ def roll_a_raid(raid_group: wowraid, printing=True):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "-p", "--players", metavar="PLAYERS", help="Path to players.yaml"
+        "-p",
+        "--players",
+        metavar="PATH",
+        help="Path to the yaml file defining your players' preferences. If not set, defaults to example_players.yaml.",
     )
-    parser.add_argument("-s", "--seed", metavar="SEED", help="Random Seed")
+    parser.add_argument(
+        "-s",
+        "--seed",
+        help="Value to use as a seed for the randomisation. Set this to get reproducible results.",
+    )
     parser.add_argument(
         "-A",
         "--alliance",
         action="store_true",
-        help="Set to alliance only raid",
+        help="Set to alliance only raid, is ignored if you set -H.",
     )
     parser.add_argument(
         "-H",
         "--horde",
         action="store_true",
-        help="Set to horde only raid",
+        help="Set to horde only raid, takes precedence over -A.",
     )
     args = parser.parse_args()
     if args.players:
