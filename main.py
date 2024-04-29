@@ -54,6 +54,14 @@ def print_raid_comp(raid_group: wowraid):
     raid_group.pretty_print()
 
 
+def roll_a_raid(raid_group: wowraid, printing=True):
+    raid_group.assign_roles()
+    raid_group.assign_classes()
+    raid_group.assign_races()
+    if printing:
+        raid_group.pretty_print()
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -86,10 +94,7 @@ def main():
         horde_only=args.horde,
         alliance_only=args.alliance,
     )
-    assign_roles(raid)
-    roll_classes(raid)
-    roll_races(raid)
-    # print_raid_comp(raid)
+    roll_a_raid(raid_group=raid)
 
 
 if __name__ == "__main__":
