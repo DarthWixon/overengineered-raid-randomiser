@@ -1,4 +1,12 @@
-# ban gnomes by default because I have taste
+# ban gnomes by default because I have taste - I was tempted to hardcode it.
+
+# Structure:
+# each player's preferences are delimited by ---
+# the structure of each entry is:
+# name: player name
+# banned roles: ["role_1", "role_2"] - accepted values are "tank", "healer", if you try to ban DPS you'll break it
+# banned_classes: ["class_1", "class_2"] - you can ban as many as you like, look in wowclasses.py for the spellings
+# banned_races: ["race_1", "race_2"] - look in wowraces.py for the exact spellings, if you get them wrong it won't ban them
 ---
 name: Whiskeyjack
 banned_roles: ["tank"]
