@@ -74,7 +74,8 @@ class wowraid:
     def pretty_print(self):
         divider_string = "===================="
         intro_string = (
-            f"""
+            divider_string
+            + f"""
 Guild Name: {self.name}
 Number of Players: {self.num_gamers}
 Number of Tanks: {self.num_tanks}
@@ -84,26 +85,11 @@ Number of Zuggers: {self.num_zuggers}
             + divider_string
         )
 
-        tank_string = (
-            """
-Tank Players:
-"""
-            + divider_string
-        )
+        tank_string = "Tank Players:" + "\n" + divider_string
 
-        healer_string = (
-            """
-Healer Players:
-"""
-            + divider_string
-        )
+        healer_string = "Healer Players:" + "\n" + divider_string
 
-        zugger_string = (
-            """
-Zugzug Players:
-"""
-            + divider_string
-        )
+        zugger_string = "Zugzug Players:" + "\n" + divider_string
 
         print(intro_string)
         print(tank_string)

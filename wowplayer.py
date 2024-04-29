@@ -33,8 +33,7 @@ class wowplayer:
     def pretty_print(self):
         divider_string = "=========="
         player_string = (
-            f"""
-Player Name: {self.name.title()}
+            f"""Player Name: {self.name.title()}
 Role: {self.assigned_role.name.title()}
 Character: {self.assigned_race.title()} {self.assigned_spec.title()} {self.assigned_class.name.title()}
 """
