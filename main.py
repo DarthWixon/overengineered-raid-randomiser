@@ -46,7 +46,8 @@ def roll_a_raid(raid_group: wowraid, printing=True):
         raid_group.pretty_print()
 
 
-def main():
+def process_args():
+
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "-p",
@@ -71,16 +72,25 @@ def main():
         action="store_true",
         help="Set to horde only raid, takes precedence over -A.",
     )
+    parser.add_argument("-g", "--guild", help="Name of your guild.")
     args = parser.parse_args()
+    return args
+
+
+def main():
+    args = process_args()
     if args.players:
         player_yaml = args.players
     else:
         player_yaml = "example_players.yaml"
-
+    if args.guild:
+        guild_name = args.guild
+    else:
+        guild_name = "The Bridgeburners"
     random.seed(args.seed)
 
     raid = wowraid(
-        name="Based on What",
+        name=guild_name,
         gamers=gamers_from_yaml(player_yaml),
         horde_only=args.horde,
         alliance_only=args.alliance,
