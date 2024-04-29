@@ -38,22 +38,6 @@ def gamers_from_yaml(yaml_path):
     return gamer_list
 
 
-def assign_roles(raid_group: wowraid):
-    raid_group.assign_roles()
-
-
-def roll_classes(raid_group: wowraid):
-    raid_group.assign_classes()
-
-
-def roll_races(raid_group: wowraid):
-    raid_group.assign_races()
-
-
-def print_raid_comp(raid_group: wowraid):
-    raid_group.pretty_print()
-
-
 def roll_a_raid(raid_group: wowraid, printing=True):
     raid_group.assign_roles()
     raid_group.assign_classes()
