@@ -51,7 +51,7 @@ banned_races: ["gnome", "mechagnome"]
 name: Mallet
 banned_roles: []
 banned_classes: []
-banned_races: ["gnome", "mechagnome"]
+banned_races: [] 
 ---
 name: Sorry
 banned_roles: ["healer", "tank"]

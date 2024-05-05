@@ -66,16 +66,20 @@ Character: Worgen Protection Warrior
 ==========
 Healer Players:
 ====================
-Player Name: Quick Ben
-Role: Healer
-Character: Dracthyr Preservation Evoker
-==========
 Player Name: Detoran
 Role: Healer
 Character: Tauren Restoration Druid
 ==========
+Player Name: Whiskeyjack
+Role: Healer
+Character: Lightforged Draenei Holy Paladin
+==========
 Zugzug Players:
 ====================
+Player Name: Quick Ben
+Role: Zugger
+Character: Dracthyr Devastation Evoker
+==========
 Player Name: Kalam
 Role: Zugger
 Character: Void Elf Survival Hunter
@@ -83,10 +87,6 @@ Character: Void Elf Survival Hunter
 Player Name: Picker
 Role: Zugger
 Character: Mag'Har Orc Shadow Priest
-==========
-Player Name: Whiskeyjack
-Role: Zugger
-Character: Lightforged Draenei Retribution Paladin
 ==========
 Player Name: Hedge
 Role: Zugger
