@@ -23,7 +23,7 @@ def gamers_from_yaml(yaml_path):
             gamer["banned_roles"] = []
             for role in role_list:
                 if role.name in player["banned_roles"]:
-                    gamer["banned_roles"].append(role)
+                    gamer["banned_roles"].append(role.name)
             gamer["banned_classes"] = []
             for charclass in all_classes:
                 if charclass.name in player["banned_classes"]:
@@ -34,7 +34,6 @@ def gamers_from_yaml(yaml_path):
                     gamer["banned_races"].append(race)
 
             gamer_list.append(wowplayer.from_dict(player_dict=player))
-
     return gamer_list
 
 

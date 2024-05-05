@@ -3,8 +3,8 @@ import random
 import wowerrors
 from wowrole import healer, tank, zugger
 
-role_list = [tank, healer, zugger]
-
+TANK_ROLE = "tank"
+HEALER_ROLE = "healer"
 
 class wowraid:
     def __init__(self, name, gamers, horde_only=False, alliance_only=False):
@@ -33,7 +33,7 @@ class wowraid:
         random.shuffle(self.unassigned_gamers)
         # assign tanks
         for gamer in self.unassigned_gamers:
-            if tank not in gamer.banned_roles:
+            if TANK_ROLE not in gamer.banned_roles:
                 self.assigned_tanks.append(gamer)
                 self.unassigned_gamers.remove(gamer)
             if len(self.assigned_tanks) == self.num_tanks:
@@ -43,7 +43,7 @@ class wowraid:
 
         # assign healers
         for gamer in self.unassigned_gamers:
-            if healer not in gamer.banned_roles:
+            if HEALER_ROLE not in gamer.banned_roles:
                 self.assigned_healers.append(gamer)
                 self.unassigned_gamers.remove(gamer)
             if len(self.assigned_healers) == self.num_healers:

@@ -12,7 +12,7 @@ class wowrole:
 
     def roll_class(self, banned_classes):
         choice = random.choice(self.classes)
-        if choice in banned_classes:
+        if choice.name in banned_classes:
             return self.roll_class(banned_classes)
         else:
             return choice
